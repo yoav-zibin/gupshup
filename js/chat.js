@@ -105,6 +105,7 @@ function prereqs() {
   myUserID = btoa(name);
   var userRef = mainRef.child(myUserID);
   var userSDP = userRef.child("sdp");
+  var userICE = userRef.child("ice");
   var userStatus = userRef.child("presence");
 
   userSDP.setOnDisconnect(null);
@@ -149,6 +150,7 @@ function prereqs() {
         sdpMLineIndex: data.ice.label, candidate: data.ice.candidate
       });
       peerc.addIceCandidate(candidate);
+      userICE.set(null);
     }
   });
 }
@@ -215,6 +217,7 @@ function acceptCall(offer, fromUser) {
   getUserMedia({video:true, audio:true}, function(vs) {
     attachMediaStream(document.getElementById("localvideo"), vs);
     var pc = makePC();
+    peerc = pc;
     pc.onicecandidate = function(event) {
       if (event.candidate) {
         var iceSend = {
@@ -245,7 +248,6 @@ function acceptCall(offer, fromUser) {
         pc.setLocalDescription(answer, function() {
           // Send answer to remote end.
           log("created Answer and setLocalDescription " + JSON.stringify(answer));
-          peerc = pc;
           var toSend = {
             type: "answer",
             to: fromUser,
@@ -268,6 +270,7 @@ function initiateCall(userid) {
   getUserMedia({video:true, audio:true}, function(vs) {
     attachMediaStream(document.getElementById("localvideo"), vs);
     var pc = makePC();
+    peerc = pc;
     pc.onicecandidate = function(event) {
       if (event.candidate) {
         var iceSend = {
@@ -282,7 +285,7 @@ function initiateCall(userid) {
       }
     };
     pc.addStream(vs);
-      
+
     pc.onaddstream = function(obj) {
       log("Got onaddstream of type " + obj.type);
       attachMediaStream(document.getElementById("remotevideo"), obj.stream);
@@ -296,7 +299,6 @@ function initiateCall(userid) {
       pc.setLocalDescription(offer, function() {
         // Send offer to remote end.
         log("setLocalDescription, sending to remote");
-        peerc = pc;
         var toSend = {
           type: "offer",
           to: userid,
