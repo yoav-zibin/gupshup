@@ -5,7 +5,7 @@ Congratulations to Firefox and Chrome for the first
 This is a fantastic first step towards a future where browser-to-browser
 real-time communication is a reality.
 
-We're excited about the potential for real-time at Firebase. Gupshup is
+We're excited about the potential for real-time at [Firebase](https://www.firebase.com/). Gupshup is
 a WebRTC based video calling demo that works on the latest version
 of Chrome and Firefox. It uses Firebase to signal your WebRTC calls so you
 **don't need any servers to use this new technology**.
