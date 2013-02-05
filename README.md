@@ -15,7 +15,7 @@ of Chrome and Firefox. It uses Firebase to signal your WebRTC calls so you
 Requirements
 ------------
 * [Chrome Beta](https://www.google.com/intl/en/chrome/browser/beta.html) (v25) or higher.
-* [Firefox Nightly](http://nightly.mozilla.org/) with the `media.peerconnection.enabled` preferences set to `true`.
+* [Firefox Nightly](http://nightly.mozilla.org/) with the `media.peerconnection.enabled` preference set to `true`.
 
 How It Works
 ------------
