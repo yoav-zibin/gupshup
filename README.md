@@ -1,8 +1,14 @@
-Gupshup
-=======
-Gupshup is a simple [WebRTC](http://webrtc.org) based video calling demo.
-It uses [Firebase](https://www.firebase.com) to perform signaling, thereby
-requiring **no servers at all**!
+Hello Chrome & Firefox, meet server-less WebRTC!
+================================================
+Congratulations to Firefox and Chrome for the first
+(interoperable WebRTC call)[https://hacks.mozilla.org/2013/02/hello-chrome-its-firefox-calling/]!
+This is a fantastic first step towards a future where browser-to-browser
+real-time communication is a reality.
+
+We're excited about the potential for real-time at Firebase. Gupshup is
+a WebRTC based video calling demo that works on the latest version
+of Chrome and Firefox. It uses Firebase to signal your WebRTC calls so you
+**don't need any servers to use this new technology**.
 
 ### [Live Demo hosted on Github pages!](http://firebase.github.com/gupshup)
 
@@ -20,8 +26,8 @@ All the important code is in
 thanks to Eric Rescorla for providing a ton of help with porting the interop
 logic to JavaScript!
 
-Known Issues
-------------
+Known Issues with WebRTC
+------------------------
 The remote video can sometimes take upto 10 seconds to appear, when initiating
 a call from Chrome and accepting it in Firefox.
 
