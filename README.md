@@ -33,8 +33,8 @@ logic to JavaScript!
 
 Known Issues with WebRTC
 ------------------------
-The remote video can sometimes take up to 10 seconds to appear. There may be
-other rough edges around WebRTC.
+* The remote video can sometimes take up to 10 seconds to appear.
+* There may be other rough edges around WebRTC.
 
 License
 -------
