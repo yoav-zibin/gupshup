@@ -1,7 +1,7 @@
 Hello Chrome & Firefox, meet server-less WebRTC!
 ================================================
 Congratulations to Firefox and Chrome for the first
-(interoperable WebRTC call)[https://hacks.mozilla.org/2013/02/hello-chrome-its-firefox-calling/]!
+[interoperable WebRTC call](https://hacks.mozilla.org/2013/02/hello-chrome-its-firefox-calling/)!
 This is a fantastic first step towards a future where browser-to-browser
 real-time communication is a reality.
 
@@ -11,6 +11,11 @@ of Chrome and Firefox. It uses Firebase to signal your WebRTC calls so you
 **don't need any servers to use this new technology**.
 
 ### [Live Demo hosted on Github pages!](http://firebase.github.com/gupshup)
+
+Requirements
+------------
+* [Chrome Beta](https://www.google.com/intl/en/chrome/browser/beta.html) (v25) or higher.
+* [Firefox Nightly](http://nightly.mozilla.org/) with the `media.peerconnection.enabled` preferences set to `true`.
 
 How It Works
 ------------
@@ -28,8 +33,8 @@ logic to JavaScript!
 
 Known Issues with WebRTC
 ------------------------
-The remote video can sometimes take upto 10 seconds to appear, when initiating
-a call from Chrome and accepting it in Firefox.
+The remote video can sometimes take up to 10 seconds to appear. There may be
+other rough edges around WebRTC.
 
 License
 -------
