@@ -69,11 +69,12 @@ function adapter() {
     makePC = function() {
       return new webkitRTCPeerConnection({
         "iceServers": [{"url": "stun:stun.l.google.com:19302"}],
-      }, {"optional": []});
+      }, {"optional": [{"DtlsSrtpKeyAgreement": true}]});
     };
     getUserMedia = navigator.webkitGetUserMedia.bind(navigator);
     attachMediaStream = function(element, stream) {
       element.src = webkitURL.createObjectURL(stream);
+      element.play();
     };
   }
 }
