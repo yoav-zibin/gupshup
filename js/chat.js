@@ -108,8 +108,8 @@ function prereqs() {
   var userICE = userRef.child("ice");
   var userStatus = userRef.child("presence");
 
-  userSDP.setOnDisconnect(null);
-  userStatus.setOnDisconnect(false);
+  userSDP.onDisconnect().remove();
+  userStatus.onDisconnect().set(false);
 
   $(window).unload(function() {
     userSDP.set(null);
