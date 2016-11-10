@@ -1,21 +1,6 @@
-Hello Chrome & Firefox, meet server-less WebRTC!
-================================================
-Congratulations to Firefox and Chrome for the first
-[interoperable WebRTC call](https://hacks.mozilla.org/2013/02/hello-chrome-its-firefox-calling/)!
-This is a fantastic first step towards a future where browser-to-browser
-real-time communication is a reality.
 
-We're excited about the potential for real-time at [Firebase](https://www.firebase.com/). Gupshup is
-a WebRTC based video calling demo that works on the latest version
-of Chrome and Firefox. It uses Firebase to signal your WebRTC calls so **you
-don't need any servers to use this new technology**.
+### [Live Demo hosted on Github pages!](https://yoav-zibin.github.io/gupshup/)
 
-### [Live Demo hosted on Github pages!](http://firebase.github.com/gupshup)
-
-Requirements
-------------
-* [Chrome Beta](https://www.google.com/intl/en/chrome/browser/beta.html) (v25) or higher.
-* [Firefox Nightly](http://nightly.mozilla.org/) with the `media.peerconnection.enabled` preference set to `true`.
 
 How It Works
 ------------
@@ -35,7 +20,3 @@ Known Issues with WebRTC
 ------------------------
 * The remote video can sometimes take up to 10 seconds to appear.
 * There may be other rough edges around WebRTC.
-
-License
--------
-[BSD 3-Clause](http://opensource.org/licenses/BSD-3-Clause).
