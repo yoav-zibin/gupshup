@@ -8,7 +8,7 @@ if (!console || !console.log) {
 // Ugh, globals.
 var peerc;
 var myUserID;
-var mainRef = new Firebase("https://kix.firebaseio.com/gupshup/");
+var mainRef = new Firebase("https://signalling-d073b.firebaseio.com/gupshup/");
 
 // Shim Firefox & Chrome. Interop stuff.
 var makePC = null;
