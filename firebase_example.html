@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+<script>
+var ref = new Firebase("https://signalling-d073b.firebaseio.com/");
+var automatch = ref.child("automatch");
+automatch.transaction(function(session) {
+  // If automatch has never been set, session will be `null`.
+  return session + 1;
+}, function(error, committed, snapshot) {
+  if (error) {
+    console.log('Transaction failed abnormally!', error);
+  } else if (!committed) {
+    console.log('We aborted the transaction');
+  } else {
+    console.log('All ok');
+  }
+  console.log("Data: ", snapshot.val());
+});
+</script>
+</head>
+<body>
+  Yoav
+</body>
+</html>
